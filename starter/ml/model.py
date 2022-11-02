@@ -3,6 +3,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.ensemble import RandomForestClassifier
 
+
 # Optional: implement hyperparameter tuning.
 def train_model(x_train, y_train):
     """
@@ -31,7 +32,8 @@ def train_model(x_train, y_train):
 
 def compute_model_metrics(y, preds):
     """
-    Validates the trained machine learning model using precision, recall, and F1.
+    Validates the trained machine learning model using
+    precision, recall, and F1.
 
     Inputs
     ------
