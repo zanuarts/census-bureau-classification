@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 
 # Add the necessary imports for the starter code.
 import pandas as pd
+import joblib
 
 from starter.ml.data import process_data
 from starter.ml.model import train_model
@@ -40,3 +41,6 @@ x_test, y_test, encoder, lb = process_data(
 model = train_model(x_train, y_train)
 inference = inference(model, x_test)
 evaluate = compute_model_metrics(y_test, inference)
+
+filename = 'model.sav'
+joblib.dump(model, filename)
