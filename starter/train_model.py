@@ -42,5 +42,5 @@ model = train_model(x_train, y_train)
 inference = inference(model, x_test)
 evaluate = compute_model_metrics(y_test, inference)
 
-filename = 'model.sav'
+filename = './../model/model.sav'
 joblib.dump(model, filename)
