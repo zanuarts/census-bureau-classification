@@ -12,7 +12,13 @@ client = TestClient(app)
 
 def test_get():
     r = client.get("/")
+    assert r.status_code == 200
     assert r.json()["greeting"] == "Hello, this is Project Udacity 3!"
+
+
+def test_get_malformed():
+    r = client.get("/model")
+    assert r.status_code != 200
 
 
 def test_post_prediction():
@@ -38,6 +44,7 @@ def test_post_prediction():
     r = client.post("/predict", data=data)
 
     # then
+    assert r.status_code == 200
     assert r.json()["result"] == {
         "age": 39,
         "workclass": "State-gov",
