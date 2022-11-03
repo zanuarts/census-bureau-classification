@@ -24,10 +24,10 @@ def train_model(x_train, y_train):
         base_estimator=RandomForestClassifier(n_estimators=10))
     param_grid = {
         'base_estimator__max_depth': [2, 4, 6, 8]}
-    search = GridSearchCV(calibrated_forest, param_grid, cv=5)
-    search.fit(x_train, y_train)
+    model = GridSearchCV(calibrated_forest, param_grid, cv=5)
+    model.fit(x_train, y_train)
 
-    return search
+    return model
 
 
 def compute_model_metrics(y, preds):
