@@ -48,8 +48,8 @@ x_test, y_test, encoder, lb = process_data(
 
 # Train and save a model.
 model = train_model(x_train, y_train)
-inference = inference(model, x_test)
-evaluate = compute_model_metrics(y_test, inference)
+result = inference(model, x_test)
+precision, recall, fbeta = compute_model_metrics(y_test, result)
 
 filename = './../model/model.sav'
 joblib.dump(model, filename)
