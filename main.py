@@ -9,7 +9,7 @@ from pydantic import BaseModel
 
 # Instantiate the app.
 app = FastAPI()
-model_path = './../model/model.pkl'
+model_path = 'model/model.pkl'
 
 
 class Value(BaseModel):
