@@ -1,6 +1,4 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.calibration import CalibratedClassifierCV
 from sklearn.ensemble import RandomForestClassifier
 
 
@@ -20,11 +18,7 @@ def train_model(x_train, y_train):
     model
         Trained machine learning model.
     """
-    calibrated_forest = CalibratedClassifierCV(
-        base_estimator=RandomForestClassifier(n_estimators=10))
-    param_grid = {
-        'base_estimator__max_depth': [2, 4, 6, 8]}
-    model = GridSearchCV(calibrated_forest, param_grid, cv=5)
+    model = RandomForestClassifier(n_estimators=10)
     model.fit(x_train, y_train)
 
     return model

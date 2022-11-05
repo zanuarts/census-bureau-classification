@@ -2,14 +2,14 @@
 import joblib
 import numpy as np
 from fastapi import FastAPI
-from sklearn.preprocessing import OneHotEncoder
-
-from starter.ml.data import process_data
+from fastapi.encoders import jsonable_encoder
+import pandas as pd
 from pydantic import BaseModel
+
 
 # Instantiate the app.
 app = FastAPI()
-model_path = './model/model.sav'
+model_path = './../model/model.pkl'
 
 
 class Value(BaseModel):
@@ -57,25 +57,35 @@ async def say_hello():
 
 @app.post("/predict")
 async def predict(body: Value):
-    return {"result": body}
+    df = jsonable_encoder(body)
+    df_new = pd.DataFrame(df, index=['i'])
+    model, encoder, lb = joblib.load(model_path)
+    data = preprocessing(df_new)
+    result = model.predict(data)
+    prediction = '>50k' if result[0] else '<=50k'
+    return {"result": prediction}
 
 
 def preprocessing(item):
-    categorical_features = [
+    print('going preprocessing')
+    cat_features = [
         "workclass",
         "education",
-        "marital-status",
+        "marital_status",
         "occupation",
         "relationship",
         "race",
         "sex",
-        "native-country",
+        "native_country",
     ]
 
-    encoder = OneHotEncoder(sparse=False, handle_unknown="ignore")
-
-    item_categorical = item[categorical_features].values
-    item_continuous = item.drop(*[categorical_features], axis=1)
+    model, encoder, lb = joblib.load(model_path)
+    print('going item_categorical')
+    print(item.columns)
+    item_categorical = item[cat_features].values
+    print(item_categorical)
+    print('going drop')
+    item_continuous = item.drop(*[cat_features], axis=1)
     item_categorical = encoder.transform(item_categorical)
     data = np.concatenate([item_continuous, item_categorical], axis=1)
 
