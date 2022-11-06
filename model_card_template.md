@@ -5,10 +5,10 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 ## Model Details
 
 - Develop by @zanuarts for Udacity Project 3 in Machine Learning DevOps Engineer.
-- Model date: 5th November 2022.
-- Model version: v1.
+- Model date: 6th November 2022.
+- Model version: v2.
 - Model type: classification.
-- This model use Random Forest Classifier with `n_estimator=10`.
+- This model use Random Forest Classifier with `random_state=8`, `max_depth=64`, `n_estimator=128`.
 
 ## Intended Use
 
