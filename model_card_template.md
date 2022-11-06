@@ -4,15 +4,36 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Model Details
 
+- Develop by @zanuarts for Udacity Project 3 in Machine Learning DevOps Engineer.
+- Model date: 5th November 2022.
+- Model version: v1.
+- Model type: classification.
+- This model use Random Forest Classifier with `n_estimator=10`.
+
 ## Intended Use
+
+- Project intended Users
 
 ## Training Data
 
+- [Census Income Data Set](https://archive.ics.uci.edu/ml/datasets/census+income).
+- Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1)&& (HRSWK>0))
+- Prediction task is to determine whether a person makes over 50K a year.
+
 ## Evaluation Data
 
+- Using [Census Income Data Set](https://archive.ics.uci.edu/ml/datasets/census+income) and split it by 20% for evaluation.
+- Using `fbeta`, `precision`, and `recall` to compute model metric.
+- Using `OneHotEncoder` in preprocessing stage for categorical features.
+
 ## Metrics
-_Please include the metrics used and your model's performance on those metrics._
+
+- Using `fbeta`, `precision`, and `recall` to compute model metric.
 
 ## Ethical Considerations
 
+- No Ethical Considerations.
+
 ## Caveats and Recommendations
+
+- Need to update retrain the model with other hyperparameter for the best result.
