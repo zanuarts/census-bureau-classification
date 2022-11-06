@@ -44,3 +44,15 @@ def test_post_prediction():
     # then
     assert r.status_code == 200
     assert r.json()["result"] == "<=50k"
+
+def test_post_prediction_malformed():
+    # given
+    data = {
+        "age": 39,
+    }
+
+    # when
+    r = client.post("/predict", json=data)
+
+    # then
+    assert r.status_code != 200
