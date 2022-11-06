@@ -62,7 +62,7 @@ async def predict(body: Value):
     model, encoder, lb = joblib.load(model_path)
     data = preprocessing(df_new)
     result = model.predict(data)
-    prediction = '>50k' if result[0] else '<=50k'
+    prediction = '>50K' if result[0] else '<=50K'
     return {"result": prediction}
 
 
