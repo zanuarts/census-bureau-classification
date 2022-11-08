@@ -12,7 +12,8 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Intended Use
 
-- Project intended Users
+- This model can be use to predict salary of the person.
+- This model can be use for decision to give someone loan.
 
 ## Training Data
 
@@ -29,10 +30,16 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 ## Metrics
 
 - Using `fbeta`, `precision`, and `recall` to compute model metric.
+- Model Performance on Test Data
+    ```
+    Precision: 0.7751430907604252
+    Recall: 0.6127989657401423
+    fBeta: 0.6844765342960288 
+    ```
 
 ## Ethical Considerations
 
-- No Ethical Considerations.
+- The data has sensitive information of users and must be protected.
 
 ## Caveats and Recommendations
 
