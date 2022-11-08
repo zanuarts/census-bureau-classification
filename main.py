@@ -67,7 +67,6 @@ async def predict(body: Value):
 
 
 def preprocessing(item):
-    print('going preprocessing')
     cat_features = [
         "workclass",
         "education",
@@ -80,11 +79,7 @@ def preprocessing(item):
     ]
 
     model, encoder, lb = joblib.load(model_path)
-    print('going item_categorical')
-    print(item.columns)
     item_categorical = item[cat_features].values
-    print(item_categorical)
-    print('going drop')
     item_continuous = item.drop(*[cat_features], axis=1)
     item_categorical = encoder.transform(item_categorical)
     data = np.concatenate([item_continuous, item_categorical], axis=1)
