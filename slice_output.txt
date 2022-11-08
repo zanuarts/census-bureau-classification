@@ -1,87 +1,94 @@
 
+Model Performance on Test Data
+-----
+Precision: 0.7751430907604252
+Recall: 0.6127989657401423
+fBeta: 0.6844765342960288
+-----
+
 Category:  Bachelors
 -----
-Precision: 0.8819327731092437
-Recall: 0.945069788383611
-fBeta: 0.9124103455770484-----
+Precision: 0.8848890749267476
+Recall: 0.9518235029266097
+fBeta: 0.9171366594360086-----
 
 Category:  HS-grad
 -----
-Precision: 0.9588377723970944
-Recall: 0.4728358208955224
-fBeta: 0.6333466613354658-----
+Precision: 0.9471947194719472
+Recall: 0.5140298507462686
+fBeta: 0.6664086687306501-----
 
 Category:  11th
 -----
-Precision: 1.0
-Recall: 0.6666666666666666
-fBeta: 0.8-----
+Precision: 0.9743589743589743
+Recall: 0.6333333333333333
+fBeta: 0.7676767676767675-----
 
 Category:  Masters
 -----
-Precision: 0.9375629405840886
-Recall: 0.9708029197080292
-fBeta: 0.9538934426229508-----
+Precision: 0.9285714285714286
+Recall: 0.9624608967674662
+fBeta: 0.9452124935995905-----
 
 Category:  9th
 -----
 Precision: 1.0
-Recall: 0.37037037037037035
-fBeta: 0.5405405405405406-----
+Recall: 0.6296296296296297
+fBeta: 0.7727272727272727-----
 
 Category:  Some-college
 -----
-Precision: 0.9309664694280079
-Recall: 0.6806056236481615
-fBeta: 0.7863390254060808-----
+Precision: 0.9142318567389256
+Recall: 0.6993511175198269
+fBeta: 0.792483660130719-----
 
 Category:  Assoc-acdm
 -----
-Precision: 0.9484978540772532
-Recall: 0.8339622641509434
-fBeta: 0.8875502008032129-----
+Precision: 0.9543568464730291
+Recall: 0.8679245283018868
+fBeta: 0.9090909090909092-----
 
 Category:  Assoc-voc
 -----
-Precision: 0.9335664335664335
-Recall: 0.739612188365651
-fBeta: 0.8253477588871716-----
+Precision: 0.9642857142857143
+Recall: 0.7479224376731302
+fBeta: 0.8424336973478939-----
 
 Category:  7th-8th
 -----
 Precision: 1.0
-Recall: 0.7
-fBeta: 0.8235294117647058-----
+Recall: 0.675
+fBeta: 0.8059701492537313-----
 
 Category:  Doctorate
 -----
-Precision: 0.943217665615142
-Recall: 0.9771241830065359
-fBeta: 0.9598715890850723-----
+Precision: 0.9440993788819876
+Recall: 0.9934640522875817
+fBeta: 0.9681528662420382-----
 
 Category:  Prof-school
 -----
-Precision: 0.9496567505720824
-Recall: 0.9810874704491725
-fBeta: 0.9651162790697675-----
+Precision: 0.9477272727272728
+Recall: 0.9858156028368794
+fBeta: 0.966396292004635-----
 
 Category:  5th-6th
 -----
 Precision: 1.0
-Recall: 0.625
-fBeta: 0.7692307692307693-----
+Recall: 0.75
+fBeta: 0.8571428571428571-----
 
 Category:  10th
 -----
-Precision: 0.9375
+Precision: 1.0
 Recall: 0.4838709677419355
-fBeta: 0.6382978723404255-----
+fBeta: 0.6521739130434783-----
 
 Category:  1st-4th
 -----
 Precision: 1.0
-Recall: 0.6666666666666666
-fBeta: 0.8-----
+Recall: 0.8333333333333334
+fBeta: 0.9090909090909091-----
 
 Category:  Preschool
 -----
@@ -91,6 +98,6 @@ fBeta: 1.0-----
 
 Category:  12th
 -----
-Precision: 0.9523809523809523
-Recall: 0.6060606060606061
-fBeta: 0.7407407407407407-----
+Precision: 0.9473684210526315
+Recall: 0.5454545454545454
+fBeta: 0.6923076923076923-----

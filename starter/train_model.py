@@ -127,6 +127,16 @@ def train(x_train, y_train, x_test, y_test, encoder, lb):
     model = train_model(x_train, y_train)
     result = inference(model, x_test)
     precision, recall, fbeta = compute_model_metrics(y_test, result)
+
+    f = open(slice_output_path, 'w')
+    f.write('\nModel Performance on Test Data')
+    f.write('\n-----')
+    f.write('\nPrecision: ' + str(precision))
+    f.write('\nRecall: ' + str(recall))
+    f.write('\nfBeta: ' + str(fbeta))
+    f.write('\n-----\n')
+    f.close()
+
     joblib.dump((model, encoder, lb), model_path)
 
     return model
